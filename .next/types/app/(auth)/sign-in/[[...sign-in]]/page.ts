@@ -1,4 +1,4 @@
-// File: C:\Users\Shaghil\Desktop\mock_interview\ai-mock-interview\app\(auth)\sign-in\[[...sign-in]]\page.jsx
+// File: C:\Programming\ai-mock-inter\ai-mock-interview\app\(auth)\sign-in\[[...sign-in]]\page.jsx
 import * as entry from '../../../../../../app/(auth)/sign-in/[[...sign-in]]/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
