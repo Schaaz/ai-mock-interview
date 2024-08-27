@@ -1,4 +1,4 @@
-// File: C:\Programming\ai-mock-inter\ai-mock-interview\app\dashboard\page.jsx
+// File: C:\Users\Shaghil\Desktop\mock_interview\ai-mock-interview\app\dashboard\page.jsx
 import * as entry from '../../../../app/dashboard/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
