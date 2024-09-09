@@ -1,4 +1,4 @@
-// File: C:\Users\Shaghil\Desktop\mock_interview\ai-mock-interview\app\layout.js
+// File: G:\ai-mock-interview-sj\ai-mock-interview-sj\app\layout.js
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
