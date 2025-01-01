@@ -27,10 +27,9 @@ const RecordAnswerSection = ({
     results,
     startSpeechToText,
     stopSpeechToText,
-    setResults,
   } = useSpeechToText({
     continuous: true,
-    useLegacyResults: false,
+    useLegacyResults: false
   });
   useEffect(() => {
     results.map((result) =>
@@ -101,9 +100,9 @@ const RecordAnswerSection = ({
     if (resp) {
       toast("User Answer recorded successfully");
       setUserAnswer("");
-      setResults([]);
+      // setResults([]);
     }
-    setResults([]);
+    // setResults([]);
     setLoading(false);
   };
 
@@ -112,17 +111,17 @@ const RecordAnswerSection = ({
     <div className="flex justify-cente items-center flex-col">
       <div className="flex flex-col my-20 justify-center items-center bg-black rounded-lg p-5">
         <Image
-          src={"/webcam.png"}
+          src={"/webcam-nobg.png"}
           width={200}
           height={200}
           className="absolute"
           alt="webcam"
           priority
         />
-        {/* <Webcam
+        <Webcam
           style={{ height: 300, width: "100%", zIndex: 10 }}
           mirrored={true}
-        /> */}
+        />
       </div>
       <Button
         disabled={loading}
