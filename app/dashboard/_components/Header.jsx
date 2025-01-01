@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import Image from 'next/image'
 import { UserButton } from '@clerk/nextjs'
 import { usePathname } from 'next/navigation'
+
 export default function Header() {
     const path = usePathname();
     useEffect(()=>{
@@ -29,3 +30,4 @@ export default function Header() {
     </div>
   )
 }
+
