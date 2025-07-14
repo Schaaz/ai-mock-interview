@@ -12,33 +12,34 @@ function Interview({ params }) {
   const [interviewData, setInterviewData] = useState();
   const [webCamEnabled, setWebCamEnabled] = useState(false);
   useEffect(() => {
+    console.log(params.interviewId)
     GetInterviewDetails();
-  }, []);
+  }, [])
+
+  // Fetch interview details based on the interviewId from the URL parameters
+  // This function will be called when the component mounts
+
+
   const GetInterviewDetails = async () => {
-    const result = await db
-      .select()
-      .from(MockInterview)
-      .where(eq(MockInterview.mockId, params.interviewId));
+    const result = await db.select().from(MockInterview)
+      .where(eq(MockInterview.mockId, params.interviewId))
+    
+
+    
     setInterviewData(result[0]);
-  };
+  }
+
+
+
   return (
     <div className="my-10 ">
       <h2 className="font-bold text-2xl">Lets get started</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         <div className="flex flex-col my-5 gap-5">
           <div className="flex flex-col p-5  rounded-lg border gap-5">
-            <h2 className="text-lg">
-              <strong>Job Role/Job Position: </strong>
-              {interviewData?.jobPosition}
-            </h2>
-            <h2 className="text-lg">
-              <strong>Job Description/tech Stack: </strong>
-              {interviewData?.jobDesc}
-            </h2>
-            <h2 className="text-lg">
-              <strong>Years of Experience: </strong>
-              {interviewData?.jobExperience}
-            </h2>
+            <h2 className="text-lg"><strong>Job Role/Job Position: </strong>{interviewData?.jobPosition}</h2> 
+            <h2 className="text-lg"><strong>Job Description/tech Stack: </strong>{interviewData?.jobDesc}</h2>            
+            <h2 className="text-lg"><strong>Years of Experience: </strong>{interviewData?.jobExperience}</h2>           
           </div>
           <div className="p-5 border rounded-lg border-yellow-300 bg-yellow-100">
             <h2 className="flex gap-2 items-center text-yellow-500">
