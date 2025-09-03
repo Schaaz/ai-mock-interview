@@ -3,3 +3,5 @@
 /.next/
 /out/
 /build
+/.next
+.next/
