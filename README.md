@@ -27,6 +27,4 @@ Backend/AI: Google Gemini API
 
 Database: MongoDB
 
-
-
-Auth: NextAuth.js
+Auth: Clerk
