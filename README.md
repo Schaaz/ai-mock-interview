@@ -1,30 +1,86 @@
-PrepGrid
+🧩 PrepGrid
 
-PrepGrid is an AI-powered mock interview platform built with Next.js, designed to help students and professionals prepare for job interviews.
-It leverages Google Gemini API to simulate realistic interview scenarios, provide feedback, and enhance learning.
+PrepGrid is an AI-powered mock interview platform available on Web and Android, designed to help students and professionals prepare for real-world job interviews.
+Built with Next.js, TypeScript, and Google Gemini API, it simulates realistic interview scenarios, evaluates answers, and provides personalized AI feedback.
 
-🚀 Features
+🚀 Features Implemented
+🌐 Web (Next.js)
 
-🤖 AI-Powered Interviews – Get mock interviews with responses generated using Google Gemini API.
+🤖 AI-Powered Interviews – Real-time Q&A sessions using Google Gemini API
 
-🎯 Personalized Feedback – Improve with instant AI-driven suggestions.
+🎯 Instant Feedback – AI-generated suggestions and improvement tips
 
-🌐 Next.js Framework – Fast, scalable, and SEO-friendly.
+🔐 User Authentication – Secure login/signup via Clerk
 
-🔐 User Authentication – Secure login/signup system.
+📊 Performance Analytics – Track your improvement over multiple sessions
 
-📊 Interview Analytics – Track performance over time.
+🎨 Modern UI/UX – Built with TailwindCSS, fully responsive and smooth
 
-🎨 Modern UI/UX – Clean and responsive design with TailwindCSS.
+☁️ MongoDB Integration – Store user sessions, feedback, and analytics data
 
-🛠️ Tech Stack
+📱 Android (React Native / Native Bridge)
 
-Frontend: Next.js
+🗣️ Voice Input Support – Answer questions verbally in real-time
 
-Styling: TailwindCSS
+📷 Camera-Based Interview Mode – Record and analyze expressions (OpenCV-based)
 
-Backend/AI: Google Gemini API
+🧩 Cross-Platform Sync – Same account access and analytics on both Web & Android
 
-Database: MongoDB
+🔔 Push Notifications – Get reminders for daily interview practice
 
-Auth: Clerk
+📸 Screenshots
+
+
+	
+
+
+
+⚙️ Setup Instructions
+1. Clone the Repository
+
+2. Web Setup (Next.js)
+npm install
+npm run dev
+
+
+Create a .env.local file:
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_bG92ZWQtZ29sZGZpc2gtNTQuY2xlcmsuYWNjb3VudHMuZGV2JA
+CLERK_SECRET_KEY=sk_test_16LMq0fEZOmyzgW3Ns1smTymJ96OsdGFCSajOw2a94
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_DRIZZLE_DB_URL='postgresql://neondb_owner:npg_n3JVDSCR1fbi@ep-empty-night-a16xdsp2-pooler.ap-southeast-1.aws.neon.tech/ai-interview?sslmode=require&channel_binding=require'
+NEXT_PUBLIC_GEMINI_API_KEY=AIzaSyB85pCoNtd1gCeW1Tiw6mlvjhJUYy7kPrc
+NEXT_PUBLIC_INTERVIEW_QUESTION_COUNT =5
+NEXT_PUBLIC_INFORMATION = "Enable Video Recording for Mock Interviews. This will help you review your performance and improve your skills. You can enable or disable this feature in the settings."
+NEXT_PUBLIC_QUESTION_NOTE="Click on Record Answer when you want to answer the question. At the end of the interview we will give you the feedback along with correct answer for each of the question and your answer to compare it."
+
+
+
+🧠 Architecture Overview
+🧩 Web Architecture (Next.js + TypeScript)
+
+Frontend: Next.js (TypeScript, TailwindCSS)
+
+Backend: API routes handle requests to Google Gemini API
+
+Database: MongoDB stores user data, interview sessions, and analytics
+
+Auth Layer: Clerk provides secure and scalable authentication
+
+
+
+🧰 Tech Stack
+Layer	Technology
+Frontend	Next.js (TypeScript), TailwindCSS
+AI/Backend	Google Gemini API
+Database	MongoDB
+Auth	Clerk
+Native	C++ (for frame processing)
+
+💡 Future Enhancements
+
+🎥 Real-time facial emotion analysis for better feedback
+
+🧠 Adaptive question difficulty based on past performance
+
+🗂️ Resume and job-matching suggestions using Gemini embeddings
