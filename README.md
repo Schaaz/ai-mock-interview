@@ -29,10 +29,8 @@ Built with Next.js, TypeScript, and Google Gemini API, it simulates realistic in
 🔔 Push Notifications – Get reminders for daily interview practice
 
 📸 Screenshots
-
-
-	
-
+https://drive.google.com/file/d/1ebAM7pLu2OfCGapyHbmk3BXkBnQNH0Ui/view?usp=drive_link
+https://drive.google.com/file/d/1N8KmlYkrCqOOdFa4UnJNA657pC7uNPXe/view?usp=drive_link
 
 
 ⚙️ Setup Instructions
