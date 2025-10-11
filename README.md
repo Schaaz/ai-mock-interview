@@ -32,6 +32,9 @@ Built with Next.js, TypeScript, and Google Gemini API, it simulates realistic in
 
 https://drive.google.com/file/d/1ebAM7pLu2OfCGapyHbmk3BXkBnQNH0Ui/view?usp=drive_link
 https://drive.google.com/file/d/1N8KmlYkrCqOOdFa4UnJNA657pC7uNPXe/view?usp=drive_link
+https://drive.google.com/file/d/1egiulXkVoFO49cPZFNi7VglLL2hZe7wm/view?usp=sharing
+https://drive.google.com/file/d/1PUT_P25Y8Ir5DsVw564KpIRGLTu1POH3/view?usp=drive_link
+https://drive.google.com/file/d/1CD_cTSuNLtTtNMhQzeZKH8T4SkCUSVl1/view?usp=drive_link
 
 
 ⚙️ Setup Instructions
