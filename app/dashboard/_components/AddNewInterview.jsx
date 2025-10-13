@@ -37,15 +37,29 @@ export default function AddNewInterview() {
         e.preventDefault();
         console.log(jobPosition, jobDesc, jobExperience)
 
-        const InputPrompt = "Job Position: "+jobPosition+", Job Description: "+jobDesc+", Years of Experience = "+jobExperience+". Based on the Job Position, Job Description and years of experience, Give us "+process.env.NEXT_PUBLIC_INTERVIEW_QUESTION_COUNT+" interview questions along with their answers in json format. Give us Question and answer field in JSON. Return exactly " + process.env.NEXT_PUBLIC_INTERVIEW_QUESTION_COUNT+ " interview questions and answers in **pure JSON array** format, without any extra text, code fences, or explanation. Make sure the JSON format is correct without any invalid characters."
+        const InputPrompt = "Job Position: "+jobPosition+", Job Description: "+jobDesc+", Years of Experience = "+jobExperience+". Based on the Job Position, Job Description and years of experience, Give us "+process.env.NEXT_PUBLIC_INTERVIEW_QUESTION_COUNT+" interview questions along with their answers in json format. Give us Question and answer field in JSON. Return exactly " + process.env.NEXT_PUBLIC_INTERVIEW_QUESTION_COUNT+ " interview questions and answers in **pure JSON array** format, without any extra text, code fences, whitespaces or explanation. Make sure the JSON format is correct without any invalid characters."
 
         const result = await chatSession.sendMessage({
-            message: InputPrompt
+            message: InputPrompt,
+            generationConfig: {
+                responseMimeType: "application/json",
+                responseSchema: {
+                    type: "array",
+                    items: {
+                    type: "object",
+                    properties: {
+                        question: { type: "string" },
+                        answer: { type: "string" },
+                    },
+                    required: ["question", "answer"],
+                    },
+                },
+            },
         });
 
         // const MockJsonResp = (result.response.text()).replace('```json','').replace('```','');
-        const MockJsonResp = (result.text).replace('```json','').replace('```','');
-        // const MockJsonResp = result.text;
+        // const MockJsonResp = (result.text).replace('```json','').replace('```','');
+        const MockJsonResp = result.text;
         console.log(MockJsonResp)
         console.log(JSON.parse(MockJsonResp));
         setJsonResponse(MockJsonResp);
