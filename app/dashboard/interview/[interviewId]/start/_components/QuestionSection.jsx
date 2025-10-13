@@ -20,7 +20,7 @@ if('speechSynthesis' in window){
             ))}
         </div>
             <h2 className='my-5 text-md md:text-lg'>
-                {mockInterviewQuestion[activeQuestionIndex]?.question}
+                {mockInterviewQuestion[activeQuestionIndex]?.Question}
             </h2>
             <Volume2 className='cursor-pointer' onClick={()=>textToSpeach(mockInterviewQuestion[activeQuestionIndex]?.question)}/>
             <div className='border rounded-lg p-5 bg-blue-100 mt-20'>
